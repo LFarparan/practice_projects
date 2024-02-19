@@ -52,7 +52,7 @@ p.low_opa {
 }
 
 h1 {
-    font-size: 55px;
+    font-size: 50px;
     margin-bottom: 15px;
 }
 
@@ -72,3 +72,49 @@ button.signup {
     flex: 3;
 }
 
+.container1 {
+    display: flex;
+    background-color: white;
+    color: black;
+    justify-content: center;
+}
+
+.con1 {
+    flex: initial;
+    margin: 15px;
+    width: 1100px;
+}
+
+.item_container {
+    display: flex;
+    height: 320px;
+    justify-content: space-around;
+}
+
+.titletext {
+    padding: 50px 0 70px 0;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.item_frame {
+    height:250px;
+    width: 200px;
+
+}
+
+.blue_box {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    border: 8px solid #3882f6;
+    margin: auto;
+}
+
+p.img_label {
+    font-size: 18px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}

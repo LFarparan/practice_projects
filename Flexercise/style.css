@@ -118,3 +118,36 @@ p.img_label {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.container2 {
+    display: flex;
+    background-color: #e5e7eb;
+    color: black;
+    justify-content: center;
+}
+.quotainer {
+    width: 1100px;
+    flex: initial;
+}
+
+.quote_contents {
+    width: 1100px;
+    padding: 100px 70px 100px 120px;
+    border: 5px solid blue;
+    
+    
+}
+
+p.quote {
+    font-size: 36px;
+    font-style: italic;
+    color: #363636;
+}
+
+p.credit {
+    padding-top: 20px;
+    font-size: 23px;
+    text-align: right;
+    font-weight: 600;
+    color: #363636;
+}

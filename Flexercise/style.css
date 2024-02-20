@@ -133,14 +133,19 @@ p.img_label {
 .quote_contents {
     width: 1100px;
     padding: 100px 70px 100px 120px;
+    display:flex;
     
-    
+}
+
+.quote_contents div {
+    flex:1;
 }
 
 p.quote {
     font-size: 36px;
     font-style: italic;
     color: #363636;
+    flex:1;
 }
 
 p.credit {
@@ -149,6 +154,7 @@ p.credit {
     text-align: right;
     font-weight: 600;
     color: #363636;
+    flex:1;
 }
 
 .container3 {
@@ -158,9 +164,8 @@ p.credit {
 }
 
 .signup_container {
-    border: 3px solid green;
-    width: 1100px;
-    flex: 1;
+    border: 5px solid green;
+    display: flex;
 }
 
 .blue_area {
@@ -169,22 +174,26 @@ p.credit {
     padding: 50px 0;
     background-color: #3882f6;
     border-radius: 15px;
-    width: 1100px;
 }
 
 .bluegap{
-    border: 5px solid black;
-    flex: 1;
+    width: 100px;
+    flex:1;
+    border: 5px solid yellow;
 }
 
 div.blue_contents {
     display:flex;
+    width: 900px;
+    border: 5px solid orange;
+
+
 }
 
 div.left_text {
     font-size: 23px;
-    width: 900px;
-    flex: auto;
+    border: 5px solid pink;
+
 }
 
 span.smol_text {
@@ -192,8 +201,11 @@ span.smol_text {
 }
 
 .aligntainer {
+    display: flex;
     margin-left: auto;
-    align-items: center;
+    justify-content: right;
+    border: 5px solid pink;
+    flex:1;
 }
 
 button.lower_sign{

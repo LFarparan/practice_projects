@@ -1,0 +1,1 @@
+This is a Javascript project imitating the game Rock, Paper & Scissors

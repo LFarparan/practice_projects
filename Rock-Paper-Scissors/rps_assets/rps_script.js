@@ -21,11 +21,21 @@ function RPS (playerSelection, computerSelection){
     return {announcement:verdict, winner: whoWin}
 }
 
+
 function startGame (){
     for (rounds = 1; rounds <= 5; rounds++){
-        let playerSelection = prompt("Choose your bet, Rock, Paper or Scissors");
+        let isValid = false;
+        let playerSelection = '';
+        while (!isValid) {
+            let playerSelection = prompt("Choose your bet, Rock, Paper or Scissors").toLocaleLowerCase();
+            console.log(playerSelection)
+            if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors')
+                isValid= true;
+            else console.log('Input is invalid')
+        }
         let computerSelection = getComputerChoice();
-        let game = RPS(playerSelection.toLowerCase(), computerSelection.toLowerCase())
+        console.log(playerSelection)
+        let game = RPS(playerSelection, computerSelection.toLowerCase())
         console.log(game.announcement)
         if (game.winner == 'player'){
             playerScore++

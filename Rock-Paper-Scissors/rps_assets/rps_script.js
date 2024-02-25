@@ -1,8 +1,8 @@
 function getComputerChoice(){
     let rannum = Math.floor(Math.random() * 3) + 1;
-    let com_choice = (rannum == 1)? "Rock":
-        (rannum == 2) ? "Paper":
-        (rannum == 3) ? 'Scissors':
+    let com_choice = (rannum == 1)? "rock":
+        (rannum == 2) ? "paper":
+        (rannum == 3) ? 'scissors':
         com_choice = rannum
     return com_choice; 
 }
@@ -27,15 +27,14 @@ function startGame (){
         let isValid = false;
         let playerSelection = '';
         while (!isValid) {
-            let playerSelection = prompt("Choose your bet, Rock, Paper or Scissors").toLocaleLowerCase();
-            console.log(playerSelection)
+            playerSelection = prompt("Choose your bet, Rock, Paper or Scissors");
             if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors')
                 isValid= true;
-            else console.log('Input is invalid')
+            else console.log(playerSelection + ' is an invalid input')
         }
+    
         let computerSelection = getComputerChoice();
-        console.log(playerSelection)
-        let game = RPS(playerSelection, computerSelection.toLowerCase())
+        let game = RPS(playerSelection, computerSelection)
         console.log(game.announcement)
         if (game.winner == 'player'){
             playerScore++
@@ -46,13 +45,14 @@ function startGame (){
         else console.log('Draw')
 
         console.log("Player: " +playerScore+ "    Computer: " + computerScore);
-        document.getElementById("result").innerHTML = game.announcement;
+        
     }
 }
 
 function startTally() {
     let tally = (playerScore > computerScore) ? "You Beat em AI" : (playerScore < computerScore) ? "AI Supremacy" : "Its a Draw"
     console.log(tally)
+    document.getElementById("result").innerHTML = tally;
 }
 
 let playerScore = 0;

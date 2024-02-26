@@ -27,7 +27,7 @@ function startGame (){
         let isValid = false;
         let playerSelection = '';
         while (!isValid) {
-            playerSelection = prompt("Choose your bet, Rock, Paper or Scissors");
+            playerSelection = prompt("Choose your bet, Rock, Paper or Scissors").toLowerCase();
             if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors')
                 isValid= true;
             else console.log(playerSelection + ' is an invalid input')

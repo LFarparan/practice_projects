@@ -4,7 +4,7 @@ function getComputerChoice(){
         (rannum == 2) ? "paper":
         (rannum == 3) ? 'scissors':
         com_choice = rannum
-    return com_choice; 
+    return com_choice
 }
 
 function RPS (playerSelection, computerSelection){
@@ -16,8 +16,8 @@ function RPS (playerSelection, computerSelection){
      (playerSelection == 'scissors' && computerSelection == 'paper') ?  "You pick " +playerSelection+ " against " +computerSelection+ ", You Win!!":
      (playerSelection == 'paper' && computerSelection == 'scissors') ?  "You pick " +playerSelection+ " against " +computerSelection+ ", You Lose!":
      (playerSelection == 'paper' && computerSelection == 'rock') ?  "You pick " +playerSelection+ " against " +computerSelection+ ", You Win!!":
-     playerSelection + " is an invalid bet"
-    let whoWin = (verdict.includes('You Win')) ? "player" : (verdict.includes('You Lose')) ? "computer" : "draw"
+     playerSelection + " is an invalid bet";
+    let whoWin = (verdict.includes('You Win')) ? "player" : (verdict.includes('You Lose')) ? "computer" : "draw";
     return {announcement:verdict, winner: whoWin}
 }
 
@@ -27,23 +27,26 @@ function startGame (){
         let isValid = false;
         let playerSelection = '';
         while (!isValid) {
+            alert('Round '+ rounds);
             playerSelection = prompt("Choose your bet, Rock, Paper or Scissors").toLowerCase();
             if (playerSelection == 'rock' || playerSelection == 'paper' || playerSelection == 'scissors')
                 isValid= true;
-            else console.log(playerSelection + ' is an invalid input')
+            else {
+                console.log(playerSelection + ' is an invalid input');
+                alert(playerSelection + ' is an invalid input')
+            }
         }
     
         let computerSelection = getComputerChoice();
-        let game = RPS(playerSelection, computerSelection)
-        console.log(game.announcement)
+        let game = RPS(playerSelection, computerSelection);
+        console.log(game.announcement);
         if (game.winner == 'player'){
-            playerScore++
+            playerScore++;
         }
         else if(game.winner == 'computer'){
-            computerScore++
+            computerScore++;
         }
         else console.log('Draw')
-
         console.log("Player: " +playerScore+ "    Computer: " + computerScore);
         
     }
@@ -51,12 +54,11 @@ function startGame (){
 
 function startTally() {
     let tally = (playerScore > computerScore) ? "You Beat em AI" : (playerScore < computerScore) ? "AI Supremacy" : "Its a Draw"
-    console.log(tally)
+    console.log(tally);
     document.getElementById("result").innerHTML = tally;
 }
 
 let playerScore = 0;
 let computerScore = 0;
-
-startGame()
-startTally()
+startGame();
+startTally();

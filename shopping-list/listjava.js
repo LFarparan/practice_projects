@@ -23,5 +23,3 @@ function addItem(){
     listCon.appendChild(entryCon);
     entryCon.appendChild(itemEntry); 
 }
-
-
